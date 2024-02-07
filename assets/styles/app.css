@@ -1,3 +1,22 @@
 body {
-    background-color: skyblue;
+    background-color: #e7eff6;
+}
+
+.bg-custom{
+    background-color: #63ace5;
+
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4b86b4;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h2{
+    padding: 0rem 1rem;
 }
