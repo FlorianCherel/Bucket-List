@@ -20,3 +20,136 @@ footer {
 header h2{
     padding: 0rem 1rem;
 }
+
+.example-wrapper{
+    text-align: center;
+}
+
+.example-wrapper img{
+    border-radius: 50%;
+}
+.example-wrapper h1{
+    color: #0342a1;
+}
+.example-wrapper h3{
+    color: #0342a1;
+}
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+.wishesList{
+    text-align: center;
+}
+.wishesList h1{
+    color: #0342a1;
+}
+.wishesList ul{
+    list-style: none;
+}
+.wishesList li{
+    text-align: justify-all;
+}
+.aboutUs {
+    text-align: center
+}
+.aboutUs h1{
+    color: #0342a1;
+}
+.aboutUs p{
+    border-style: solid;
+    border-color: #63ace5;
+    margin: auto;
+    width: 650px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 1.5rem;
+    font-size: 0.8em;
+    font-style: italic;
+
+}
+.wishesList ul{
+    text-align: center;
+    border-style: solid;
+    border-color: #63ace5;
+    margin: auto;
+    width: 850px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 1rem;
+}
+
+.wishesList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.wishesList li button {
+    margin-left: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .wishesList ul {
+        width: 90%; /* Réduire la largeur de la liste pour les écrans plus petits */
+    }
+}
+
+/* Media query pour les écrans plus petits (tels que les téléphones mobiles) */
+@media only screen and (max-width: 480px) {
+    .wishesList li {
+        flex-direction: column; /* Changer la direction des éléments pour les empiler verticalement */
+    }
+    .wishesList li button {
+        margin-left: 0; /* Supprimer la marge gauche des boutons pour les empiler correctement */
+        margin-top: 10px; /* Ajouter une marge en haut des boutons pour les espacer */
+    }
+}
+.formWish{
+    text-align: center;
+    border-style: solid;
+    border-color: #63ace5;
+    margin: auto;
+    width: 500px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 1rem;
+}
+.formWish div input, div textarea{
+    width: 100%;
+
+}
+.titreWish {
+    text-align: center;
+    color: #0342a1;
+}
+.form-errors ul{
+    color: red;
+    list-style: none;
+}
+.wishDetail{
+    text-align: center;
+    border-style: solid;
+    border-color: #63ace5;
+    margin: auto;
+    width: 500px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 1rem;
+}
+.wishDetail a {
+    text-decoration: none;
+}
+.wishDetail button {
+    margin: 1rem;
+}
+.wishDetail div input, div textarea {
+    width: 100%;
+}
+.wishDetail img {
+    width: 100%;
+}

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bucket-List{% endblock %}
+
+{% block body %}
+
+    <h1 class="titreWish">Modification d'un souhait</h1>
+
+    <div class="wishDetail">
+        {{ form_start(form) }}
+        <div>
+            <b>{{ form_label (form.title) }}</b>
+            {{ form_widget(form.title) }}
+        </div>
+        <span class="form-errors">{{ form_errors(form.title) }}</span>
+        <div>
+            <b>{{ form_label (form.description) }}</b>
+            {{ form_widget(form.description) }}
+        </div>
+        <div>
+            <b>{{ form_label (form.author) }}</b>
+            {{ form_widget(form.author) }}
+        </div>
+        <div>
+            <b>{{ form_label (form.image) }}</b>
+            {{ form_widget(form.image) }}
+        </div>
+        <span class="form-errors">{{ form_errors(form.author) }}</span>
+        <div id="checkbox">
+            <b>{{ form_label (form.isPublished) }}</b>
+            {{ form_widget(form.isPublished) }}
+        </div>
+        <div>
+{#            {{ form_label (form.submit) }}#}
+{#            {{ form_widget(form.submit) }}#}
+        </div>
+{#        {{ form_widget(form) }}#}
+
+
+        {{ form_end(form) }}
+    </div>
+
+
+
+
+{% endblock %}

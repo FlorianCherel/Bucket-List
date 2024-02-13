@@ -4,19 +4,29 @@
 
 {% block body %}
     <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
     </style>
 
-    <div class="example-wrapper">
+    <div class="wishesList">
 
-        <h2>Ceci est la page list !</h2>
+        <h1>Wishes List !</h1>
         <ul>
-            <li>Idée n°1 : Sauter en parachute</li>
-            <li>Idée n°2 : Faire un long voyage dans le train transsiberrien</li>
-            <li>Idée n°3 : Prendre l’apéro en apesanteur dans un centre spatial</li>
-            <li>Idée n°4 : Privatiser un aqualand</li>
-            <li>Idée n°5 : Me faire une tournée des bars avec un chapeau frite pour respecter la distanciation sociale</li>
+            {% for wish in wishes %}
+                <li>
+                    <span>{{ wish.title }}</span>
+                    <a href="{{ path('app_wish_detail', {'id': wish.id}) }}"><button type="button" class="btn btn-outline-info">Détail</button></a>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 {% endblock %}

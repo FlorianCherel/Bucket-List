@@ -12,32 +12,40 @@
 {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-        <header>{% block header %}
-                <nav class="navbar navbar-expand-lg bg-custom">
-                    <div class="container-fluid">
-                        <img src="{{asset('img/logo.png')}}" alt="logo">
-                        <h2>Bucket-List</h2>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="app_home" href="{{ path('app_home') }}">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('app_about') }}">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('app_list') }}">Liste des idées</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-        {% endblock %}</header>
-    <body>
 
+    <body>
+    <header>{% block header %}
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }}"> {{ message }} </div>
+                {% endfor %}
+            {% endfor %}
+            <nav class="navbar navbar-expand-lg bg-custom">
+                <div class="container-fluid">
+                    <img src="{{asset('img/logo.png')}}" alt="logo">
+                    <h2>Bucket-List</h2>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="app_home" href="{{ path('app_home') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_about') }}">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_wish_create') }}">Add Yours !</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_wish_list') }}">All Wishes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        {% endblock %}</header>
 
 
         {% block body %}{% endblock %}
